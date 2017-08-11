@@ -1,0 +1,42 @@
+This might not be updated, but it should give a quick reference of the available interfaces.
+
+squadId: Either a _meta.registeredSquadIds entry (string), or a player index (number).
+Player-indexed squads behave differently in many ways.
+
+If you dont pass forcefullyCreate, you might get nil back if the given squadId doesnt exist.
+local squad = _G.GetSquad(string: LuaForce.name, squadId, boolean: forceCreateSquad)
+
+Orders might not always be forcefully reapplied, unless you specify force.
+squad:Order(factorioCommandTable, boolean: force)
+squad:Get(_meta.settings.*)
+squad:Set(_meta.settings.*, value)
+squad:Validate() - always done before task processing
+squad:IsGathered()
+squad:IsFull()
+squad:Destroy()
+squad:Transfer(to: squadId)
+squad:GetPosition() - current squad position,
+squad.position - this is where the squads current task wants the squad to end up
+squad:GetSurface()
+local added = squad + LuaEntity
+if not added then print("wtf") end
+#squad, number of members in the squad
+squad(3), returns member at index 3
+for i = 1, #squad do
+	if squad(i).valid then ... end
+end
+squad.taskData - tasks use this to save any data they want, nil'd if a squad re-tasks
+squad.home - assembler
+
+InitializeGUI(player)
+UpdateCommandFrame(player, squadId, refresh)
+UpdateSquadButtons(player, squadId), if squadid is nil, all buttons are updated
+
+SelectSquad(squad, player), removes all stickers the player has applied previously
+DeselectSquads(player), removes all stickers the player has applied previously
+RemoveSquadStickers(squad), removes all stickers from this squad
+
+tasks/id.lua needs to return a table with at least 3 functions:
+process(squad)
+shouldRetask(squad), return either false, true, or a specific _meta.tasks.*
+shouldReinforce(squad, location), return true if you want reinforcements at the given location
