@@ -54,6 +54,7 @@ do
 						type = "nested-result",
 						action = {
 							type = "area",
+							radius = 0,
 							perimeter = 0,
 							action_delivery = {
 								type = "instant",

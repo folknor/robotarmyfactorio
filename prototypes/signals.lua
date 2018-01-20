@@ -23,6 +23,7 @@ _G.data:extend(
 		type = "virtual-signal",
 		name = "signal-squadid-player",
 		icon = "__robotarmy__/graphics/icons/yoursquad.png",
+		icon_size = 32,
 		subgroup = "virtual-signal-robotarmy-squadids",
 		order = "a-squadid-a"
 	},
@@ -30,6 +31,7 @@ _G.data:extend(
 		type = "virtual-signal",
 		name = "signal-order-hunt",
 		icon = "__robotarmy__/graphics/icons/order-hunt.png",
+		icon_size = 32,
 		subgroup = "virtual-signal-robotarmy-settings",
 		order = "b-settings-1"
 	},
@@ -37,6 +39,7 @@ _G.data:extend(
 		type = "virtual-signal",
 		name = "signal-order-guard",
 		icon = "__robotarmy__/graphics/icons/order-guard.png",
+		icon_size = 32,
 		subgroup = "virtual-signal-robotarmy-settings",
 		order = "b-settings-2"
 	},
@@ -44,6 +47,7 @@ _G.data:extend(
 		type = "virtual-signal",
 		name = "signal-hunt-radius",
 		icon = "__robotarmy__/graphics/icons/signal_hunt_radius.png",
+		icon_size = 32,
 		subgroup = "virtual-signal-robotarmy-settings",
 		order = "b-settings-3"
 	},
@@ -51,6 +55,7 @@ _G.data:extend(
 		type = "virtual-signal",
 		name = "signal-retreat-size",
 		icon = "__robotarmy__/graphics/icons/signal_retreat_size.png",
+		icon_size = 32,
 		subgroup = "virtual-signal-robotarmy-settings",
 		order = "b-settings-4"
 	},
@@ -58,6 +63,7 @@ _G.data:extend(
 		type = "virtual-signal",
 		name = "signal-squad-size",
 		icon = "__robotarmy__/graphics/icons/signal_squad_size.png",
+		icon_size = 32,
 		subgroup = "virtual-signal-robotarmy-settings",
 		order = "b-settings-5"
 	},

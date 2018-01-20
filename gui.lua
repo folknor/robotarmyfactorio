@@ -229,15 +229,11 @@ local function initGui(player)
 		})
 	end
 	if not frame.grid then
-		local grid = frame.add({
+		frame.add({
 			type = "flow",
 			name = "grid",
-			direction = "horizontal",
 			style = "robotarmy_command_palette_buttons"
 		})
-		grid.style.max_on_row = 4 -- seems this can't be set from the data style properly
-		--grid.style.resize_row_to_width = true
-		grid.style.resize_to_row_height = true
 	end
 
 	-- Remove all children of frame.grid so that we can easily invoke
@@ -261,9 +257,9 @@ local function initGui(player)
 			direction = "horizontal",
 			style = "robotarmy_command_information"
 		})
-		frame.status.style.max_on_row = 2 -- seems this can't be set from the data style properly
-		frame.status.style.resize_row_to_width = true
-		frame.status.style.resize_to_row_height = true
+		--frame.status.style.max_on_row = 2 -- seems this can't be set from the data style properly
+		--frame.status.style.resize_row_to_width = true
+		--frame.status.style.resize_to_row_height = true
 	end
 
 	if frame.status.label_retreat then frame.status.label_retreat.destroy() end
@@ -277,7 +273,6 @@ local function initGui(player)
 				style = "robotarmy_command_label",
 				caption = {"robotarmy-interface.label-" .. label.id},
 			})
-			frame.status[labelFormat[label.id]].single_line = true
 		end
 		if not frame.status[label.id] then
 			frame.status.add({
@@ -286,7 +281,6 @@ local function initGui(player)
 				style = "robotarmy_command_data",
 				caption = "",
 			})
-			frame.status[label.id].single_line = true
 		end
 	end
 

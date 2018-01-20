@@ -78,6 +78,7 @@ do
 		name = "selection-sticker",
 		flags = { "not-on-map" },
 		icon = "__robotarmy__/graphics/icons/unit-selection.png",
+		icon_size = 32,
 		animation = {
 			filename = "__robotarmy__/graphics/icons/unit-selection.png",
 			priority = "extra-high",
@@ -159,7 +160,7 @@ do
 		name = "pole-plop",
 		flags = { "not-on-map" },
 		animations = { {
-			filename = "__base__/graphics/terrain/blank.png",
+			filename = "__robotarmy__/graphics/icons/blank.png",
 			priority = "low",
 			width = 32,
 			height = 128,

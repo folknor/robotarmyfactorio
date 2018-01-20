@@ -28,6 +28,7 @@ do
 				{ icon = _ICON:format(droidInfo.icon) },
 				{ icon = "__robotarmy__/graphics/icons/count.png" },
 			},
+			icon_size = 32,
 			subgroup = "virtual-signal-robotarmy-output",
 			order = _COUNT_ORDER:format(droidInfo.order),
 		})
@@ -37,6 +38,7 @@ do
 			localised_name = { _LOCALE:format(droid) },
 			localised_description = { "item-description.droid-item-description", { _DESC:format(droid) } },
 			icon = _ICON:format(droidInfo.icon),
+			icon_size = 32,
 			flags = quickbar,
 			order = droidInfo.order,
 			subgroup = "droid-combat-group",
@@ -52,6 +54,7 @@ do
 				{ icon = _ICON:format(droidInfo.icon) },
 				{ icon = "__robotarmy__/graphics/icons/warning.png" },
 			},
+			icon_size = 32,
 			flags = hidden,
 			order = droidInfo.order,
 			subgroup = "droid-combat-group",
@@ -102,6 +105,7 @@ do
 				{ icon = _TINT, tint = color },
 				{ icon = "__robotarmy__/graphics/icons/squad.png" },
 			},
+			icon_size = 32,
 			subgroup = "virtual-signal-robotarmy-squadids",
 			order = _SIGNAL_ORDER:format(c.name)
 		})
@@ -114,6 +118,7 @@ do
 					{ icon = _TINT, tint = color },
 					{ icon = _ICON:format(m.classes[droid].icon) },
 				},
+				icon_size = 32,
 				category = "droids",
 				subgroup = droid,
 				energy_required = m.classes[droid].deploy,
@@ -130,6 +135,7 @@ do
 			type = "recipe",
 			name = m.commandFormat:format(d.id),
 			icon = d.icon,
+			icon_size = 32,
 			enabled = false,
 			hidden = true,
 			energy_required = 300,

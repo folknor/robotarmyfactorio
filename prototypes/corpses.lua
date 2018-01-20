@@ -2,6 +2,7 @@ _G.data:extend({ {
 	type = "corpse",
 	name = "robot-corpse",
 	icon = "__base__/graphics/icons/medium-biter-corpse.png",
+	icon_size = 32,
 	selectable_in_game = false,
 	selection_box = { { -1, -1 }, { 1, 1 } },
 	flags = { "placeable-neutral", "placeable-off-grid", "building-direction-8-way", "not-on-map" },

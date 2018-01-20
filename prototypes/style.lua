@@ -11,11 +11,12 @@ do
 			right_padding = 8,
 		},
 		{
-			type = "flow_style",
+			type = "horizontal_flow_style",
 			name = "robotarmy_command_information",
 			horizontal_spacing = 8,
 			vertical_spacing = 2,
 			max_on_row = 2,
+			resize_row_to_width = true,
 			resize_to_row_height = true,
 			top_padding = 0,
 			bottom_padding = 0,
@@ -24,7 +25,7 @@ do
 			maximal_width = 192,
 		},
 		{
-			type = "flow_style",
+			type = "horizontal_flow_style",
 			name = "robotarmy_command_palette_buttons",
 			horizontal_spacing = 8,
 			vertical_spacing = 8,
@@ -59,6 +60,7 @@ do
 			name = "robotarmy_command_label",
 			font = "default-bold",
 			width = (192 / 2) - 16,
+			single_line = true,
 		},
 		{
 			type = "label_style",
@@ -66,6 +68,7 @@ do
 			font = "default",
 			width = (192 / 2) - 16,
 			align = "right",
+			single_line = true,
 		},
 	}
 	for _, s in next, styles do
